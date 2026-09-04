@@ -58,13 +58,9 @@ export function MeetTheDrop() {
             transition={{ type: "spring", stiffness: 250 }}
             className="rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 p-8 flex flex-col items-center text-center"
           >
-            <motion.h3
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="text-5xl md:text-6xl font-bold tracking-tight text-[#ededed]"
-            >
+            <h3 className="text-3xl md:text-4xl font-bold tracking-tight text-[#ededed]">
               Semilla Spidi
-            </motion.h3>
+            </h3>
             
             <motion.div
               animate={{ rotate: [-2, 2, -2] }}
@@ -74,16 +70,17 @@ export function MeetTheDrop() {
               <Image
                 src="/characters/character-left.png"
                 alt="Semilla Spidi"
-                width={256}
-                height={256}
+                width={500}
+                height={500}
                 className="w-48 h-48 md:w-64 md:h-64 object-contain"
               />
             </motion.div>
             
             <p className="text-neutral-400 text-sm leading-relaxed max-w-xs">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Nació en las calles, creció entre el ruido y la cultura.
-              Semilla Spidi no sigue tendencias — las ignora.
+              Sí, es Spider-Man. No, no tiene el apartamento ni la novia ni el
+              reconocimiento. Tiene el barrio, tiene el traje y tiene más
+              problemas de los que pidió. Semilla Spidi no eligió esto — pero
+              tampoco lo cambiaría.
             </p>
           </motion.div>
 
@@ -94,13 +91,9 @@ export function MeetTheDrop() {
             transition={{ type: "spring", stiffness: 250 }}
             className="rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 p-8 flex flex-col items-center text-center"
           >
-            <motion.h3
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-              className="text-5xl md:text-6xl font-bold tracking-tight text-[#ededed]"
-            >
+            <h3 className="text-3xl md:text-4xl font-bold tracking-tight text-[#ededed]">
               Semilla Ing
-            </motion.h3>
+            </h3>
             
             <motion.div
               animate={{ rotate: [2, -2, 2] }}
@@ -110,16 +103,18 @@ export function MeetTheDrop() {
               <Image
                 src="/characters/semilla-usb.png"
                 alt="Semilla Ing"
-                width={256}
-                height={256}
+                width={512}
+                height={512}
                 className="w-48 h-48 md:w-64 md:h-64 object-contain"
               />
             </motion.div>
             
             <p className="text-neutral-400 text-sm leading-relaxed max-w-xs">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Construido en silicio y sueños. Semilla Ing entiende el
-              sistema mejor que nadie — y sabe exactamente cómo romperlo.
+              Siempre ocupado, nunca descansado. Tiene mil proyectos en la
+              cabeza y los ojos de alguien que lleva tres días sin dormir bien.
+              El USB es su amuleto — no sabe exactamente qué hay guardado ahí,
+              pero sin él no sale. Semilla Ing no le teme al futuro. Le teme a
+              quedarse atrás.
             </p>
           </motion.div>
         </motion.div>

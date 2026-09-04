@@ -35,7 +35,8 @@ export function StockCounter() {
       <div className="mt-6 h-2 w-full rounded-full bg-white/10 overflow-hidden">
         <motion.div
           initial={{ width: 0 }}
-          animate={{ width: `${stockPercentage}%` }}
+          whileInView={{ width: `${stockPercentage}%` }}
+          viewport={viewportOnce}
           transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
           className="h-full bg-[#f5f0e8]"
         />

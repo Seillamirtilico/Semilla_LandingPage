@@ -99,7 +99,7 @@ export function Hero() {
           <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-3 backdrop-blur-md">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[1.35rem]">
               <Image
-                src="/mockups/ hero-tshirt.jpg"
+                src="/mockups/hero-tshirt.jpg"
                 alt="Semilla Drop 01 T-shirt"
                 fill
                 className="object-cover"

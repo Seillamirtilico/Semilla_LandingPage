@@ -30,8 +30,8 @@ export function Header() {
           <Image
   src="/logo/semilla-logo.png"
   alt="Semilla logo"
-  width={200}
-  height={500}
+  width={749}
+  height={280}
   className="object-contain"
   style={{ height: "40px", width: "auto" }}
 />

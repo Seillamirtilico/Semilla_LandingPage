@@ -1,14 +1,29 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { WHATSAPP_URL } from "@/lib/whatsapp";
 import { viewportOnce } from "@/lib/motion";
 
-const steps = [
+const steps: {
+  number: string;
+  title: string;
+  subtitle: ReactNode;
+}[] = [
   {
     number: "01",
     title: "Elige tu talla",
-    subtitle: "S, M, L o XL. Consulta las medidas si tienes dudas.",
+    subtitle: (
+      <>
+        S, M, L o XL.{" "}
+        <a
+          href="#tallas"
+          className="underline underline-offset-2 text-neutral-300 hover:text-[#f5f0e8] transition-colors"
+        >
+          Consulta las medidas si tienes dudas.
+        </a>
+      </>
+    ),
   },
   {
     number: "02",
@@ -21,7 +36,7 @@ const steps = [
     subtitle:
       "Coordinamos la entrega en Bogotá. Envío gratis + pago contra entrega disponible.",
   },
-] as const;
+];
 
 const containerVariants = {
   hidden: {},
@@ -53,15 +68,20 @@ export function HowToBuy() {
       </h2>
 
       <div className="relative">
-        {/* Connector line */}
-        <div className="absolute left-4 top-0 bottom-0 w-px bg-white/10" />
-
         {steps.map((step, index) => (
           <motion.div
             key={step.number}
             variants={itemVariants}
             className="relative mb-6 last:mb-0"
           >
+            {/* Connector: dot center to next dot center. The last step draws
+                none, so the line stops at dot 03 instead of trailing off. */}
+            {index < steps.length - 1 && (
+              <div
+                className="absolute left-4 top-4 -bottom-10 w-px bg-white/10"
+                aria-hidden
+              />
+            )}
             <div className="flex items-start gap-4">
               <div className="relative z-10 flex-shrink-0">
                 <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
